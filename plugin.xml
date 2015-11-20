@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.mindboardapps.cordova.plugin.cataloghelper"
+        version="0.1.0">
+
+  <name>Catalog Helper Plugin</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/cataloghelper.js" target="js/cataloghelper.js"/>
+
+  <js-module src="www/cataloghelper.js" name="cataloghelper">
+    <clobbers target="cataloghelper" />
+  </js-module>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="CatalogHelper">
+        <param name="ios-package" value="CatalogHelper" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/CatalogHelper.h" target-dir="CatalogHelperPlugin"/>
+    <source-file src="src/ios/CatalogHelper.m" target-dir="CatalogHelperPlugin"/>
+  </platform>
+
+</plugin>
