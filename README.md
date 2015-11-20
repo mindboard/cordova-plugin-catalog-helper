@@ -35,7 +35,9 @@ var failure = function(){
 };
 
 var targetPageNumber = '1'; // 1-index method
-cataloghelper.process("www/catalog.pdf", targetPageNumber,"297","210", success, failure);
+var thumbnailWidth   = '297'
+var thumbnailHeight  = '210'
+cataloghelper.process("www/catalog.pdf", targetPageNumber, thumbnailWidth, thumbnailHeight, success, failure);
 ```
 
 For more details, see examples/index.html and index.js.
@@ -62,12 +64,13 @@ $ cd catalog
 $ cordova plugin add ../cordova-plugin-catalog-helper
 ```
 
-Replace under two files
+Replace two files and copy catalog.pdf
 
-- replace www/index.html with examples/index.html
-- replace www/js/index.js with examples/index.js
-
-and copy examples/catalog.pdf to www/catalog.pdf.
+```
+$ cp ../cordova-plugin-catalog-helper/examples/index.html www/index.html 
+$ cp ../cordova-plugin-catalog-helper/examples/index.js www/js/index.js 
+$ cp ../cordova-plugin-catalog-helper/examples/catalog.pdf www/
+```
 
 Install iOS platform
 
@@ -82,5 +85,7 @@ cordova run ios --target="iPad-2"
 ```
 
 ## More Info
+
+[Introduction Cordova Catalog Helper Plugin](http://qiita.com/mindboard/items/6f74c360a2d99435652f)
 
 
