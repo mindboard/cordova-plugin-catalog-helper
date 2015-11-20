@@ -64,9 +64,23 @@ $ cordova plugin add ../cordova-plugin-catalog-helper
 
 Replace under two files
 
-- www/index.html with examples/index.html
-- www/js/index.js with examples/index.js
+- replace www/index.html with examples/index.html
+- replace www/js/index.js with examples/index.js
 
 and copy examples/catalog.pdf to www/catalog.pdf.
+
+Install iOS platform
+
+```
+$ cordova platform add ios
+```
+
+Run the code
+
+```
+cordova run ios --target="iPad-2"
+```
+
+## More Info
 
 
