@@ -24,6 +24,8 @@ var failure = function(){
 cataloghelper.pageCount("www/catalog.pdf", success, failure);
 ```
 
+Get PDF(base64string) data
+
 ```javascript
 var success = function( base64png ) {
 	alert( 'png base64 string : '+base64png );
